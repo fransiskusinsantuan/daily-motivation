@@ -1,0 +1,266 @@
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Motivasi Harian</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+padding:0;
+text-align:center;
+color:white;
+background-size:cover;
+background-position:center;
+transition:1s;
+}
+
+.overlay{
+background:rgba(0,0,0,0.5);
+min-height:100vh;
+padding-top:40px;
+}
+
+.container{
+background:rgba(0,0,0,0.6);
+width:85%;
+max-width:800px;
+margin:auto;
+padding:40px;
+border-radius:15px;
+}
+
+#motivasi{
+font-size:28px;
+margin-top:20px;
+font-weight:bold;
+}
+
+#nasehat{
+display:none;
+font-size:18px;
+margin-top:20px;
+line-height:1.6;
+}
+
+button{
+margin:10px;
+padding:14px 25px;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+.btn1{background:#4facfe;color:white;}
+.btn2{background:#25D366;color:white;}
+.btn3{background:#ffaa00;color:white;}
+.btn4{background:#333;color:white;}
+
+footer{
+margin-top:40px;
+}
+
+#motivasi{
+font-size:28px;
+margin-top:20px;
+font-weight:bold;
+}
+
+.fade{
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.fade{
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<h1>Motivasi Harian</h1>
+
+<p id="tanggal"></p>
+
+<div class="container">
+
+<p id="motivasi"></p>
+
+<button class="btn1" onclick="motivasiBaru()">Motivasi Baru</button>
+
+<button class="btn3" onclick="lihatNasehat()">Lihat Nasehat</button>
+
+<button class="btn2" onclick="shareWA()">Share ke WhatsApp</button>
+
+<p id="nasehat"></p>
+
+</div>
+
+<footer>
+
+<p>Bermenung Bersama Fransiskus Insantuan_13
+    Update Setiap Hari
+</p>
+
+
+</footer>
+
+</div>
+
+<audio autoplay loop muted id="music">
+<source src="musikku.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+document.addEventListener("click", function() {
+document.getElementById("music").muted = false;
+document.getElementById("music").play();
+});
+    
+
+const daftarMotivasi=[
+
+{
+motivasi:`Jangan Lupang Bersyukur.
+Hal Kecil Yang Kamu Miliki Hari Ini,
+Mungkin Adalah Impian Bagi Orang Lain. `,
+nasehat:`Terkadang kita terlalu sibuk memikirkan apa yang belum kita miliki,
+sampai lupa melihat apa yang sudah kita miliki.
+Mungkin saja hari ini tidak begitu sempurna dan tidak sesuai dengan yang kita harapkan,
+namun kita perlu mensyukuri banyak hal: Kesehatan, Keluarga, makanan, rumah, dan yang lainnya.
+Mengapa kita perlu mensyukurinya? Karena banyak orang di luar sana
+yang mungkin pada hari ini sedang sakit, kehilangan keluarga, belum bisa menikmati
+bagaimana rasanya makanan yang pantas, belum ada tempat tinggal yang layak dan
+banyak kekurangan lainnya yang bagi kita mungkin adalah sesuatu yang tidak perlu dipikirkan
+karna otomatis ada. Contoh nyatanya kita sedang menempuh pendidikan, entah SMA atau Kuliah.
+Banyak hal yang menjadi alasan sehingga kita sering merasa tidak cukup: Misalnya kurang
+uang jajan, tidak dibelikan motor oleh orang tua, banyak tugas dan masih banyak lagi
+yang kita sering keluhkan. Padahal banyak orang yang tidak dapat merasakan apa itu
+pendidikan hanya karena serba kekurangan. Saudara-saudaraku, selagi masih diberi waktu,
+kesempatan dan berkat marilah kita bersyukur, karena belum tentu yang kita miliki
+dan nikmati saat ini adalah milik kita selamanya.😊
+KETAHUILAH DAN PAHAMILAH!
+BAHWA  APA  YANG  KAMU  MILIKI  SAAT  INI,
+RUMAH,  PAKAIAN,  ORANG TUA,  ANAK,
+BAHKAN  NAPASMU  SEKALIPUN
+HANYALAH  TITIPAN😐
+YANG  MUSTAHIL  
+AKAN  ADA  UNTUK  SELAMANYA.`,
+gambar:"gambarempat.jpg"
+},
+
+{
+motivasi:`Hidup Bukan Tentang Siapa Yang Paling Cepat,
+Tapi Siapa Yang Tetap Berjalan Walaupun Pelan.`,
+nasehat:` Dalam hidup, setiap orang memiliki jalan dan waktunya masing-masing.
+Ada orang yang terlihat cepat mencapai keberhasilan, 
+ada juga yang membutuhkan waktu lebih lama. 
+Lebih lama bukan berarti gagal.
+Yang paling penting adalah tetap melangkah dan tidak menyerah.
+Langkah kecil yang terus kita lakukan setiap hari akan membawa kita lebih dekat pada tujuan.
+Jangan terlalu sering membandingkan diri dengan orang lain,
+karena setiap orang memiliki jalan hidupnya sendiri.😊
+Selama kita masih tetap berusaha, belajar, dan terus berjalan walaupun pelan, 
+kita tetap sedang menuju masa depan yang jauh lebih baik.
+HARGAILAH DIRIMU
+TERIMALAH DIRIMU DAN
+PERCAYALAH PADA DIRIMU!
+Lihatlah KURA-KURA🥲 walaupun ia begitu lambat, ia tidak melepaskan
+cangkangnya untuk lebih mudah melangkah.
+Hidup bisa diibaratkan seperti perjalanan seekor kura-kura.
+Kura-kura tidak berlari cepat seperti hewan lain,
+tetapi ia terus berjalan dengan sabar dan tidak berhenti.
+Pada akhirnya karena ketekunan dan kesabaran,
+ia bisa juga sampai ke tujuan.
+KURA-KURA telah mengajarkan kepada kita
+bahwa keberhasilan bukan hanya milik mereka yang paling cepat, 
+tetapi milik mereka yang tetap berusaha dan tidak menyerah.
+Walaupun langkah kita kecil dan terasa lambat, 
+selama kita tetap bergerak maju, suatu saat nanti
+kita juga akan mencapai tujuan yang kita impikan.`,
+gambar:"siput.jpeg"
+},
+
+];
+
+let indexSekarang=0;
+
+function motivasiBaru(){
+
+let random=Math.floor(Math.random()*daftarMotivasi.length);
+
+indexSekarang=random;
+
+document.getElementById("motivasi").innerText=daftarMotivasi[random].motivasi;
+
+document.getElementById("nasehat").style.display="none";
+
+document.body.style.backgroundImage="url("+daftarMotivasi[random].gambar+")";
+
+}
+
+function lihatNasehat(){
+
+document.getElementById("nasehat").style.display="block";
+
+document.getElementById("nasehat").innerText=daftarMotivasi[indexSekarang].nasehat;
+
+}
+
+function shareWA(){
+
+let teks=document.getElementById("motivasi").innerText;
+
+let url="https://wa.me/?text="+encodeURIComponent(teks);
+
+window.open(url);
+
+}
+
+const hariIni=new Date();
+
+document.getElementById("tanggal").innerText=hariIni.toDateString();
+
+motivasiBaru();
+
+</script>
+
+</body>
+</html>
